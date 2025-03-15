@@ -97,6 +97,18 @@ func (ew *EmbedWeb) setConfigField(ctx context.Context, field string, value any)
 	}
 }
 
+func (ew *EmbedWeb) GetWebServerPort() int {
+	return ew.config.Port
+}
+
+func (ew *EmbedWeb) GetWebServerPublic() bool {
+	return ew.config.Public
+}
+
+func (ew *EmbedWeb) GetLogLevel() string {
+	return ew.config.LogLevel
+}
+
 func (ew *EmbedWeb) SetWebServerPort(ctx context.Context, port int) error {
 	ew.embedLog.Infof("set embed web server port to %d", port)
 	ew.config.Port = port

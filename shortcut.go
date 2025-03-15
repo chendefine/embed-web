@@ -40,6 +40,18 @@ func Log() *logrus.Logger {
 	return innerEmbedWeb.Log()
 }
 
+func GetWebServerPort() int {
+	return innerEmbedWeb.GetWebServerPort()
+}
+
+func GetWebServerPublic() bool {
+	return innerEmbedWeb.GetWebServerPublic()
+}
+
+func GetLogLevel() string {
+	return innerEmbedWeb.GetLogLevel()
+}
+
 func SetWebServerPort(ctx context.Context, port int) error {
 	return innerEmbedWeb.SetWebServerPort(ctx, port)
 }
